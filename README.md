@@ -14,7 +14,7 @@ Waveform of trace of cover for single error correction for a zero encoded input
    * rvecc_encode.sv: ECC Encoder 
    * rvecc_decode.sv: ECC Decoder
    * channel_model.sv: Channel with error injection functionality
-   * top.sv: Top module which instantiates encoder, decoder, channel and contains properties and covers.
+   * top.sv: Top module which instantiates encoder, decoder, channel and contains formal properties and covers.
    * ecc_bmc: Output directory for Bounded Model Checking.
    * ecc_prove: Output directory for full proof.
    * ecc_witness: Output directory for witness cover. 
