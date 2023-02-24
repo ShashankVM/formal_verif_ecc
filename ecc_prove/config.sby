@@ -1,0 +1,19 @@
+[options]
+mode prove
+
+[engines]
+smtbmc boolector
+
+[script]
+read -sv rvecc_encode.sv
+read -sv rvecc_decode.sv
+read -sv channel_model.sv
+read -sv top.sv
+hierarchy -check -top top
+prep -top top
+
+[files]
+rvecc_encode.sv
+rvecc_decode.sv
+channel_model.sv
+top.sv

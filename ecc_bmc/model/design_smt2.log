@@ -1,0 +1,153 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite -- YosysHQ Edition [202302081344]     |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2023 YosysHQ GmbH                                    |
+ |                                                                            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \rvecc_encode
+Used module:     \rvecc_decode
+Used module:     \channel_model
+
+2.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \rvecc_encode
+Used module:     \rvecc_decode
+Used module:     \channel_model
+Removed 0 unused modules.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== top ===
+
+   Number of wires:                 40
+   Number of wire bits:            275
+   Number of public wires:          15
+   Number of public wire bits:     250
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 63
+     $and                            1
+     $anyseq                        25
+     $assert                         7
+     $assume                         3
+     $eq                             1
+     $le                             2
+     $mux                            6
+     $ne                             3
+     $not                           12
+     channel_model                   1
+     rvecc_decode                    1
+     rvecc_encode                    1
+
+=== rvecc_encode ===
+
+   Number of wires:                 63
+   Number of wire bits:            125
+   Number of public wires:           3
+   Number of public wire bits:      45
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 62
+     $reduce_xor                     2
+     $xor                           60
+
+=== rvecc_decode ===
+
+   Number of wires:                 80
+   Number of wire bits:            337
+   Number of public wires:          12
+   Number of public wire bits:     206
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                113
+     $and                            4
+     $eq                            40
+     $mux                            1
+     $not                            2
+     $reduce_bool                    1
+     $reduce_xor                     2
+     $xor                           63
+
+=== channel_model ===
+
+   Number of wires:                 91
+   Number of wire bits:            351
+   Number of public wires:           7
+   Number of public wire bits:     141
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 87
+     $anyseq                         2
+     $bmux                           2
+     $mux                           79
+     $not                            2
+     $shl                            2
+
+=== design hierarchy ===
+
+   top                               1
+     channel_model                   1
+     rvecc_decode                    1
+     rvecc_encode                    1
+
+   Number of wires:                274
+   Number of wire bits:           1088
+   Number of public wires:          37
+   Number of public wire bits:     642
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                322
+     $and                            5
+     $anyseq                        27
+     $assert                         7
+     $assume                         3
+     $bmux                           2
+     $eq                            41
+     $le                             2
+     $mux                           86
+     $ne                             3
+     $not                           16
+     $reduce_bool                    1
+     $reduce_xor                     4
+     $shl                            2
+     $xor                          123
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module channel_model.
+Creating SMT-LIBv2 representation of module rvecc_decode.
+Creating SMT-LIBv2 representation of module rvecc_encode.
+Creating SMT-LIBv2 representation of module top.
+
+End of script. Logfile hash: 5047def442, CPU: user 0.01s system 0.01s, MEM: 22.70 MB peak
+Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 62% 2x write_smt2 (0 sec), 27% 2x read_ilang (0 sec), ...

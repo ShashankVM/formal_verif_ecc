@@ -1,0 +1,144 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite -- YosysHQ Edition [202302081344]     |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2023 YosysHQ GmbH                                    |
+ |                                                                            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_prep.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module top.
+Found 0 SCCs in module rvecc_encode.
+Found 0 SCCs in module rvecc_decode.
+Found 0 SCCs in module channel_model.
+Found 0 SCCs.
+
+3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+4. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+5. Executing ASYNC2SYNC pass.
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \rvecc_encode..
+Finding unused cells or wires in module \rvecc_decode..
+Finding unused cells or wires in module \channel_model..
+
+7. Executing FORMALFF pass.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module \rvecc_decode..
+Finding unused cells or wires in module \rvecc_encode..
+Finding unused cells or wires in module \top..
+Removed 7 unused cells and 7 unused wires.
+<suppressed ~8 debug messages>
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module channel_model...
+Checking module rvecc_decode...
+Checking module rvecc_encode...
+Checking module top...
+Warning: Wire top.\sed_ded is used but has no driver.
+Warning: Wire top.\din_encoder [31] is used but has no driver.
+Warning: Wire top.\din_encoder [30] is used but has no driver.
+Warning: Wire top.\din_encoder [29] is used but has no driver.
+Warning: Wire top.\din_encoder [28] is used but has no driver.
+Warning: Wire top.\din_encoder [27] is used but has no driver.
+Warning: Wire top.\din_encoder [26] is used but has no driver.
+Warning: Wire top.\din_encoder [25] is used but has no driver.
+Warning: Wire top.\din_encoder [24] is used but has no driver.
+Warning: Wire top.\din_encoder [23] is used but has no driver.
+Warning: Wire top.\din_encoder [22] is used but has no driver.
+Warning: Wire top.\din_encoder [21] is used but has no driver.
+Warning: Wire top.\din_encoder [20] is used but has no driver.
+Warning: Wire top.\din_encoder [19] is used but has no driver.
+Warning: Wire top.\din_encoder [18] is used but has no driver.
+Warning: Wire top.\din_encoder [17] is used but has no driver.
+Warning: Wire top.\din_encoder [16] is used but has no driver.
+Warning: Wire top.\din_encoder [15] is used but has no driver.
+Warning: Wire top.\din_encoder [14] is used but has no driver.
+Warning: Wire top.\din_encoder [13] is used but has no driver.
+Warning: Wire top.\din_encoder [12] is used but has no driver.
+Warning: Wire top.\din_encoder [11] is used but has no driver.
+Warning: Wire top.\din_encoder [10] is used but has no driver.
+Warning: Wire top.\din_encoder [9] is used but has no driver.
+Warning: Wire top.\din_encoder [8] is used but has no driver.
+Warning: Wire top.\din_encoder [7] is used but has no driver.
+Warning: Wire top.\din_encoder [6] is used but has no driver.
+Warning: Wire top.\din_encoder [5] is used but has no driver.
+Warning: Wire top.\din_encoder [4] is used but has no driver.
+Warning: Wire top.\din_encoder [3] is used but has no driver.
+Warning: Wire top.\din_encoder [2] is used but has no driver.
+Warning: Wire top.\din_encoder [1] is used but has no driver.
+Warning: Wire top.\din_encoder [0] is used but has no driver.
+Warning: Wire top.\error_pos1 [5] is used but has no driver.
+Warning: Wire top.\error_pos1 [4] is used but has no driver.
+Warning: Wire top.\error_pos1 [3] is used but has no driver.
+Warning: Wire top.\error_pos1 [2] is used but has no driver.
+Warning: Wire top.\error_pos1 [1] is used but has no driver.
+Warning: Wire top.\error_pos1 [0] is used but has no driver.
+Warning: Wire top.\error_pos2 [5] is used but has no driver.
+Warning: Wire top.\error_pos2 [4] is used but has no driver.
+Warning: Wire top.\error_pos2 [3] is used but has no driver.
+Warning: Wire top.\error_pos2 [2] is used but has no driver.
+Warning: Wire top.\error_pos2 [1] is used but has no driver.
+Warning: Wire top.\error_pos2 [0] is used but has no driver.
+Warning: Wire top.\decoder_en is used but has no driver.
+Found and reported 46 problems.
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module channel_model.
+Optimizing module rvecc_decode.
+Optimizing module rvecc_encode.
+Optimizing module top.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\channel_model'.
+Finding identical cells in module `\rvecc_decode'.
+Finding identical cells in module `\rvecc_encode'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module \rvecc_decode..
+Finding unused cells or wires in module \rvecc_encode..
+Finding unused cells or wires in module \top..
+Removed 33 unused cells and 58 unused wires.
+<suppressed ~35 debug messages>
+
+11.5. Finished fast OPT passes.
+
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module \rvecc_decode..
+Finding unused cells or wires in module \rvecc_encode..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+13. Executing RTLIL backend.
+Output filename: ../model/design_prep.il
+
+Warnings: 46 unique messages, 46 total
+End of script. Logfile hash: 92fa008adc, CPU: user 0.04s system 0.01s, MEM: 22.76 MB peak
+Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 28% 4x opt_clean (0 sec), 17% 1x check (0 sec), ...

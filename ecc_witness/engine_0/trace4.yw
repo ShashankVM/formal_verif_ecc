@@ -1,0 +1,17 @@
+{
+  "format": "Yosys Witness Trace",
+  "generator": "smtbmc",
+  "clocks": [],
+  "signals": [
+    {"path": ["\\channel", "\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_1005"], "width": 25, "offset": 0, "init_only": false},
+    {"path": ["\\channel", "\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_1007"], "width": 25, "offset": 0, "init_only": false},
+    {"path": ["\\decoder_en"], "width": 1, "offset": 0, "init_only": false},
+    {"path": ["\\din_encoder"], "width": 32, "offset": 0, "init_only": false},
+    {"path": ["\\error_pos1"], "width": 6, "offset": 0, "init_only": false},
+    {"path": ["\\error_pos2"], "width": 6, "offset": 0, "init_only": false},
+    {"path": ["\\sed_ded"], "width": 1, "offset": 0, "init_only": false}
+  ],
+  "steps": [
+    {"bits": "110000000100100000000000000000000000000000000111111111111111111111111110001000000011101000100000"}
+  ]
+}

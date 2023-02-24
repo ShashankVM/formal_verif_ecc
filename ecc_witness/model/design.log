@@ -1,0 +1,556 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite -- YosysHQ Edition [202302081344]     |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2023 YosysHQ GmbH                                    |
+ |                                                                            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing VERIFIC (loading SystemVerilog and VHDL designs using Verific).
+Built with Verific Jan23_SW_Release, released at Wed Feb  1 05:32:11 2023.
+VERIFIC-COMMENT [VERI-1482] Analyzing Verilog file 'rvecc_encode.sv'
+
+2. Executing VERIFIC (loading SystemVerilog and VHDL designs using Verific).
+Built with Verific Jan23_SW_Release, released at Wed Feb  1 05:32:11 2023.
+VERIFIC-COMMENT [VERI-1482] Analyzing Verilog file 'rvecc_decode.sv'
+
+3. Executing VERIFIC (loading SystemVerilog and VHDL designs using Verific).
+Built with Verific Jan23_SW_Release, released at Wed Feb  1 05:32:11 2023.
+VERIFIC-COMMENT [VERI-1482] Analyzing Verilog file 'channel_model.sv'
+
+4. Executing VERIFIC (loading SystemVerilog and VHDL designs using Verific).
+Built with Verific Jan23_SW_Release, released at Wed Feb  1 05:32:11 2023.
+VERIFIC-COMMENT [VERI-1482] Analyzing Verilog file 'top.sv'
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+Statically elaborating the Verific parse tree.
+Elaborating all modules in library 'work'
+VERIFIC-INFO [VERI-1018] top.sv:1: compiling module 'top'
+Running rewriter 'initial-assertions'.
+Clearing rewriter list.
+VERIFIC-INFO [VERI-1018] top.sv:1: compiling module 'top'
+VERIFIC-INFO [VERI-1018] rvecc_encode.sv:17: compiling module 'rvecc_encode'
+VERIFIC-INFO [VERI-1018] channel_model.sv:1: compiling module 'channel_model'
+VERIFIC-INFO [VERI-1018] rvecc_decode.sv:17: compiling module 'rvecc_decode'
+VERIFIC-WARNING [VDB-1002] top.sv:2: net 'din_encoder[31]' does not have a driver
+VERIFIC-WARNING [VDB-1002] top.sv:4: net 'error_pos1[5]' does not have a driver
+VERIFIC-WARNING [VDB-1002] top.sv:4: net 'error_pos2[5]' does not have a driver
+VERIFIC-WARNING [VDB-1002] top.sv:5: net 'decoder_en' does not have a driver
+VERIFIC-WARNING [VDB-1002] top.sv:5: net 'sed_ded' does not have a driver
+Importing module top.
+Importing module channel_model.
+Importing module rvecc_decode.
+Importing module rvecc_encode.
+
+5.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \rvecc_decode
+Used module:     \channel_model
+Used module:     \rvecc_encode
+
+5.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \rvecc_decode
+Used module:     \channel_model
+Used module:     \rvecc_encode
+Removed 0 unused modules.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+6. Executing PREP pass.
+
+6.1. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \rvecc_decode
+Used module:     \channel_model
+Used module:     \rvecc_encode
+
+6.1.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \rvecc_decode
+Used module:     \channel_model
+Used module:     \rvecc_encode
+Removed 0 unused modules.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+6.2. Executing PROC pass (convert processes to netlists).
+
+6.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+6.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+6.2.4. Executing PROC_INIT pass (extract init attributes).
+
+6.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+6.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+6.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+6.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+6.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+6.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rvecc_encode.
+Optimizing module rvecc_decode.
+<suppressed ~1 debug messages>
+Optimizing module channel_model.
+Optimizing module top.
+<suppressed ~40 debug messages>
+
+6.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rvecc_encode.
+Optimizing module rvecc_decode.
+Optimizing module channel_model.
+Optimizing module top.
+
+6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rvecc_encode..
+Finding unused cells or wires in module \rvecc_decode..
+Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 302 unused wires.
+<suppressed ~22 debug messages>
+
+6.5. Executing CHECK pass (checking for obvious problems).
+Checking module channel_model...
+Checking module rvecc_decode...
+Checking module rvecc_encode...
+Checking module top...
+Warning: Wire top.\sed_ded is used but has no driver.
+Warning: Wire top.\decoder_en is used but has no driver.
+Warning: Wire top.\din_encoder [31] is used but has no driver.
+Warning: Wire top.\din_encoder [30] is used but has no driver.
+Warning: Wire top.\din_encoder [29] is used but has no driver.
+Warning: Wire top.\din_encoder [28] is used but has no driver.
+Warning: Wire top.\din_encoder [27] is used but has no driver.
+Warning: Wire top.\din_encoder [26] is used but has no driver.
+Warning: Wire top.\din_encoder [25] is used but has no driver.
+Warning: Wire top.\din_encoder [24] is used but has no driver.
+Warning: Wire top.\din_encoder [23] is used but has no driver.
+Warning: Wire top.\din_encoder [22] is used but has no driver.
+Warning: Wire top.\din_encoder [21] is used but has no driver.
+Warning: Wire top.\din_encoder [20] is used but has no driver.
+Warning: Wire top.\din_encoder [19] is used but has no driver.
+Warning: Wire top.\din_encoder [18] is used but has no driver.
+Warning: Wire top.\din_encoder [17] is used but has no driver.
+Warning: Wire top.\din_encoder [16] is used but has no driver.
+Warning: Wire top.\din_encoder [15] is used but has no driver.
+Warning: Wire top.\din_encoder [14] is used but has no driver.
+Warning: Wire top.\din_encoder [13] is used but has no driver.
+Warning: Wire top.\din_encoder [12] is used but has no driver.
+Warning: Wire top.\din_encoder [11] is used but has no driver.
+Warning: Wire top.\din_encoder [10] is used but has no driver.
+Warning: Wire top.\din_encoder [9] is used but has no driver.
+Warning: Wire top.\din_encoder [8] is used but has no driver.
+Warning: Wire top.\din_encoder [7] is used but has no driver.
+Warning: Wire top.\din_encoder [6] is used but has no driver.
+Warning: Wire top.\din_encoder [5] is used but has no driver.
+Warning: Wire top.\din_encoder [4] is used but has no driver.
+Warning: Wire top.\din_encoder [3] is used but has no driver.
+Warning: Wire top.\din_encoder [2] is used but has no driver.
+Warning: Wire top.\din_encoder [1] is used but has no driver.
+Warning: Wire top.\din_encoder [0] is used but has no driver.
+Warning: Wire top.\error_pos1 [5] is used but has no driver.
+Warning: Wire top.\error_pos1 [4] is used but has no driver.
+Warning: Wire top.\error_pos1 [3] is used but has no driver.
+Warning: Wire top.\error_pos1 [2] is used but has no driver.
+Warning: Wire top.\error_pos1 [1] is used but has no driver.
+Warning: Wire top.\error_pos1 [0] is used but has no driver.
+Warning: Wire top.\error_pos2 [5] is used but has no driver.
+Warning: Wire top.\error_pos2 [4] is used but has no driver.
+Warning: Wire top.\error_pos2 [3] is used but has no driver.
+Warning: Wire top.\error_pos2 [2] is used but has no driver.
+Warning: Wire top.\error_pos2 [1] is used but has no driver.
+Warning: Wire top.\error_pos2 [0] is used but has no driver.
+Found and reported 46 problems.
+
+6.6. Executing OPT pass (performing simple optimizations).
+
+6.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module channel_model.
+Optimizing module rvecc_decode.
+Optimizing module rvecc_encode.
+Optimizing module top.
+<suppressed ~11 debug messages>
+
+6.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\channel_model'.
+Finding identical cells in module `\rvecc_decode'.
+Finding identical cells in module `\rvecc_encode'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+6.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \channel_model..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \rvecc_decode..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \rvecc_encode..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~47 debug messages>
+
+6.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \channel_model.
+  Optimizing cells in module \rvecc_decode.
+  Optimizing cells in module \rvecc_encode.
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+6.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\channel_model'.
+Finding identical cells in module `\rvecc_decode'.
+Finding identical cells in module `\rvecc_encode'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+6.6.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module \rvecc_decode..
+Finding unused cells or wires in module \rvecc_encode..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~1 debug messages>
+
+6.6.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module channel_model.
+Optimizing module rvecc_decode.
+Optimizing module rvecc_encode.
+Optimizing module top.
+
+6.6.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.6.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \channel_model..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \rvecc_decode..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \rvecc_encode..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~47 debug messages>
+
+6.6.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \channel_model.
+  Optimizing cells in module \rvecc_decode.
+  Optimizing cells in module \rvecc_encode.
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+6.6.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\channel_model'.
+Finding identical cells in module `\rvecc_decode'.
+Finding identical cells in module `\rvecc_encode'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+6.6.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module \rvecc_decode..
+Finding unused cells or wires in module \rvecc_encode..
+Finding unused cells or wires in module \top..
+
+6.6.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module channel_model.
+Optimizing module rvecc_decode.
+Optimizing module rvecc_encode.
+Optimizing module top.
+
+6.6.14. Finished OPT passes. (There is nothing left to do.)
+
+6.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 63 bits (of 64) from port A of cell channel_model.$verific$Decoder_8$channel_model.sv:11$487 ($shl).
+Removed top 25 bits (of 64) from port Y of cell channel_model.$verific$Decoder_8$channel_model.sv:11$487 ($shl).
+Removed top 63 bits (of 64) from port A of cell channel_model.$verific$Decoder_94$channel_model.sv:14$531 ($shl).
+Removed top 25 bits (of 64) from port Y of cell channel_model.$verific$Decoder_94$channel_model.sv:14$531 ($shl).
+Removed top 25 bits (of 64) from wire channel_model.$verific$n262$481.
+Removed top 30 bits (of 64) from wire channel_model.$verific$n48$480.
+Removed top 5 bits (of 6) from port B of cell rvecc_decode.$verific$equal_114$rvecc_decode.sv:49$763 ($eq).
+Removed top 4 bits (of 6) from port B of cell rvecc_decode.$verific$equal_116$rvecc_decode.sv:49$764 ($eq).
+Removed top 4 bits (of 6) from port B of cell rvecc_decode.$verific$equal_118$rvecc_decode.sv:49$765 ($eq).
+Removed top 3 bits (of 6) from port B of cell rvecc_decode.$verific$equal_120$rvecc_decode.sv:49$766 ($eq).
+Removed top 3 bits (of 6) from port B of cell rvecc_decode.$verific$equal_122$rvecc_decode.sv:49$767 ($eq).
+Removed top 3 bits (of 6) from port B of cell rvecc_decode.$verific$equal_124$rvecc_decode.sv:49$768 ($eq).
+Removed top 3 bits (of 6) from port B of cell rvecc_decode.$verific$equal_126$rvecc_decode.sv:49$769 ($eq).
+Removed top 2 bits (of 6) from port B of cell rvecc_decode.$verific$equal_128$rvecc_decode.sv:49$770 ($eq).
+Removed top 2 bits (of 6) from port B of cell rvecc_decode.$verific$equal_130$rvecc_decode.sv:49$771 ($eq).
+Removed top 2 bits (of 6) from port B of cell rvecc_decode.$verific$equal_132$rvecc_decode.sv:49$772 ($eq).
+Removed top 2 bits (of 6) from port B of cell rvecc_decode.$verific$equal_134$rvecc_decode.sv:49$773 ($eq).
+Removed top 2 bits (of 6) from port B of cell rvecc_decode.$verific$equal_136$rvecc_decode.sv:49$774 ($eq).
+Removed top 2 bits (of 6) from port B of cell rvecc_decode.$verific$equal_138$rvecc_decode.sv:49$775 ($eq).
+Removed top 2 bits (of 6) from port B of cell rvecc_decode.$verific$equal_140$rvecc_decode.sv:49$776 ($eq).
+Removed top 2 bits (of 6) from port B of cell rvecc_decode.$verific$equal_142$rvecc_decode.sv:49$777 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_144$rvecc_decode.sv:49$778 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_146$rvecc_decode.sv:49$779 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_148$rvecc_decode.sv:49$780 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_150$rvecc_decode.sv:49$781 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_152$rvecc_decode.sv:49$782 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_154$rvecc_decode.sv:49$783 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_156$rvecc_decode.sv:49$784 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_158$rvecc_decode.sv:49$785 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_160$rvecc_decode.sv:49$786 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_162$rvecc_decode.sv:49$787 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_164$rvecc_decode.sv:49$788 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_166$rvecc_decode.sv:49$789 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_168$rvecc_decode.sv:49$790 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_170$rvecc_decode.sv:49$791 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_172$rvecc_decode.sv:49$792 ($eq).
+Removed top 1 bits (of 6) from port B of cell rvecc_decode.$verific$equal_174$rvecc_decode.sv:49$793 ($eq).
+Removed top 2 bits (of 6) from port B of cell top.$verific$equal_58$top.sv:37$297 ($eq).
+Removed top 1 bits (of 6) from port B of cell top.$verific$equal_61$top.sv:38$300 ($eq).
+
+6.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module \rvecc_decode..
+Finding unused cells or wires in module \rvecc_encode..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+6.9. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6.10. Executing OPT pass (performing simple optimizations).
+
+6.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module channel_model.
+Optimizing module rvecc_decode.
+Optimizing module rvecc_encode.
+Optimizing module top.
+
+6.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\channel_model'.
+Finding identical cells in module `\rvecc_decode'.
+Finding identical cells in module `\rvecc_encode'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+6.10.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module \rvecc_decode..
+Finding unused cells or wires in module \rvecc_encode..
+Finding unused cells or wires in module \top..
+
+6.10.4. Finished fast OPT passes.
+
+6.11. Printing statistics.
+
+=== channel_model ===
+
+   Number of wires:                 89
+   Number of wire bits:            301
+   Number of public wires:           5
+   Number of public wire bits:      91
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 85
+     $bmux                           2
+     $mux                           79
+     $not                            2
+     $shl                            2
+
+=== rvecc_decode ===
+
+   Number of wires:                 80
+   Number of wire bits:            337
+   Number of public wires:          12
+   Number of public wire bits:     206
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                113
+     $and                            4
+     $eq                            40
+     $mux                            1
+     $not                            2
+     $reduce_bool                    1
+     $reduce_xor                     2
+     $xor                           63
+
+=== rvecc_encode ===
+
+   Number of wires:                 63
+   Number of wire bits:            125
+   Number of public wires:           3
+   Number of public wire bits:      45
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 62
+     $reduce_xor                     2
+     $xor                           60
+
+=== top ===
+
+   Number of wires:                 47
+   Number of wire bits:            282
+   Number of public wires:          15
+   Number of public wire bits:     250
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 52
+     $and                            1
+     $assert                         7
+     $assume                         3
+     $cover                          7
+     $eq                             4
+     $le                             2
+     $logic_not                      2
+     $mux                            6
+     $ne                             3
+     $not                           13
+     $reduce_bool                    1
+     channel_model                   1
+     rvecc_decode                    1
+     rvecc_encode                    1
+
+=== design hierarchy ===
+
+   top                               1
+     channel_model                   1
+     rvecc_decode                    1
+     rvecc_encode                    1
+
+   Number of wires:                279
+   Number of wire bits:           1045
+   Number of public wires:          35
+   Number of public wire bits:     592
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                309
+     $and                            5
+     $assert                         7
+     $assume                         3
+     $bmux                           2
+     $cover                          7
+     $eq                            44
+     $le                             2
+     $logic_not                      2
+     $mux                           86
+     $ne                             3
+     $not                           17
+     $reduce_bool                    2
+     $reduce_xor                     4
+     $shl                            2
+     $xor                          123
+
+6.12. Executing CHECK pass (checking for obvious problems).
+Checking module channel_model...
+Checking module rvecc_decode...
+Checking module rvecc_encode...
+Checking module top...
+Warning: Wire top.\sed_ded is used but has no driver.
+Warning: Wire top.\din_encoder [31] is used but has no driver.
+Warning: Wire top.\din_encoder [30] is used but has no driver.
+Warning: Wire top.\din_encoder [29] is used but has no driver.
+Warning: Wire top.\din_encoder [28] is used but has no driver.
+Warning: Wire top.\din_encoder [27] is used but has no driver.
+Warning: Wire top.\din_encoder [26] is used but has no driver.
+Warning: Wire top.\din_encoder [25] is used but has no driver.
+Warning: Wire top.\din_encoder [24] is used but has no driver.
+Warning: Wire top.\din_encoder [23] is used but has no driver.
+Warning: Wire top.\din_encoder [22] is used but has no driver.
+Warning: Wire top.\din_encoder [21] is used but has no driver.
+Warning: Wire top.\din_encoder [20] is used but has no driver.
+Warning: Wire top.\din_encoder [19] is used but has no driver.
+Warning: Wire top.\din_encoder [18] is used but has no driver.
+Warning: Wire top.\din_encoder [17] is used but has no driver.
+Warning: Wire top.\din_encoder [16] is used but has no driver.
+Warning: Wire top.\din_encoder [15] is used but has no driver.
+Warning: Wire top.\din_encoder [14] is used but has no driver.
+Warning: Wire top.\din_encoder [13] is used but has no driver.
+Warning: Wire top.\din_encoder [12] is used but has no driver.
+Warning: Wire top.\din_encoder [11] is used but has no driver.
+Warning: Wire top.\din_encoder [10] is used but has no driver.
+Warning: Wire top.\din_encoder [9] is used but has no driver.
+Warning: Wire top.\din_encoder [8] is used but has no driver.
+Warning: Wire top.\din_encoder [7] is used but has no driver.
+Warning: Wire top.\din_encoder [6] is used but has no driver.
+Warning: Wire top.\din_encoder [5] is used but has no driver.
+Warning: Wire top.\din_encoder [4] is used but has no driver.
+Warning: Wire top.\din_encoder [3] is used but has no driver.
+Warning: Wire top.\din_encoder [2] is used but has no driver.
+Warning: Wire top.\din_encoder [1] is used but has no driver.
+Warning: Wire top.\din_encoder [0] is used but has no driver.
+Warning: Wire top.\error_pos1 [5] is used but has no driver.
+Warning: Wire top.\error_pos1 [4] is used but has no driver.
+Warning: Wire top.\error_pos1 [3] is used but has no driver.
+Warning: Wire top.\error_pos1 [2] is used but has no driver.
+Warning: Wire top.\error_pos1 [1] is used but has no driver.
+Warning: Wire top.\error_pos1 [0] is used but has no driver.
+Warning: Wire top.\error_pos2 [5] is used but has no driver.
+Warning: Wire top.\error_pos2 [4] is used but has no driver.
+Warning: Wire top.\error_pos2 [3] is used but has no driver.
+Warning: Wire top.\error_pos2 [2] is used but has no driver.
+Warning: Wire top.\error_pos2 [1] is used but has no driver.
+Warning: Wire top.\error_pos2 [0] is used but has no driver.
+Warning: Wire top.\decoder_en is used but has no driver.
+Found and reported 46 problems.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \channel_model
+Used module:     \rvecc_decode
+Used module:     \rvecc_encode
+
+7.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \channel_model
+Used module:     \rvecc_decode
+Used module:     \rvecc_encode
+Removed 0 unused modules.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+8. Executing jny backend.
+
+9. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+Warnings: 51 unique messages, 97 total
+End of script. Logfile hash: b3f8f9b2ce, CPU: user 0.06s system 0.02s, MEM: 29.91 MB peak
+Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 20% 6x opt_expr (0 sec), 16% 3x hierarchy (0 sec), ...
