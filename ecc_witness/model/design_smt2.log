@@ -1,14 +1,25 @@
 
  /----------------------------------------------------------------------------\
  |                                                                            |
- |  yosys -- Yosys Open SYnthesis Suite -- YosysHQ Edition [202302081344]     |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
  |                                                                            |
- |  Copyright (C) 2012 - 2023 YosysHQ GmbH                                    |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
  |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
  |                                                                            |
  \----------------------------------------------------------------------------/
 
- Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
+ Yosys 0.38+54 (git sha1 f8d4d7128, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
 
 
 -- Executing script file `design_smt2.ys' --
@@ -22,13 +33,13 @@ Input filename: design_prep.il
 Top module:  \top
 Used module:     \rvecc_encode
 Used module:     \rvecc_decode
-Used module:     \channel_model
+Used module:     $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111
 
 2.2. Analyzing design hierarchy..
 Top module:  \top
 Used module:     \rvecc_encode
 Used module:     \rvecc_decode
-Used module:     \channel_model
+Used module:     $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111
 Removed 0 unused modules.
 Module top directly or indirectly contains formal properties -> setting "keep" attribute.
 
@@ -40,119 +51,127 @@ Module top directly or indirectly contains formal properties -> setting "keep" a
 
 === top ===
 
-   Number of wires:                 47
-   Number of wire bits:            282
-   Number of public wires:          15
-   Number of public wire bits:     250
+   Number of wires:                 53
+   Number of wire bits:            288
+   Number of public wires:          33
+   Number of public wire bits:     268
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 85
-     $and                            1
-     $anyseq                        33
+   Number of cells:                 66
+     $anyseq                        23
      $assert                         7
      $assume                         3
-     $cover                          7
+     $cover                          8
      $eq                             4
+     $ge                             2
      $le                             2
+     $logic_and                      3
      $logic_not                      2
-     $mux                            6
+     $mux                            2
      $ne                             3
-     $not                           13
+     $not                            3
+     $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111      1
      $reduce_bool                    1
-     channel_model                   1
      rvecc_decode                    1
      rvecc_encode                    1
 
 === rvecc_encode ===
 
-   Number of wires:                 63
+   Number of wires:                 83
    Number of wire bits:            125
    Number of public wires:           3
    Number of public wire bits:      45
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 62
+   Number of cells:                 87
      $reduce_xor                     2
-     $xor                           60
+     $xor                           85
 
 === rvecc_decode ===
 
-   Number of wires:                 80
+   Number of wires:                105
    Number of wire bits:            337
    Number of public wires:          12
    Number of public wire bits:     206
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                113
+   Number of cells:                143
      $and                            4
      $eq                            40
      $mux                            1
      $not                            2
      $reduce_bool                    1
      $reduce_xor                     2
-     $xor                           63
+     $xor                           93
 
-=== channel_model ===
+=== $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111 ===
 
-   Number of wires:                 91
-   Number of wire bits:            351
-   Number of public wires:           7
-   Number of public wire bits:     141
+   Number of wires:                 21
+   Number of wire bits:            499
+   Number of public wires:           5
+   Number of public wire bits:      91
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 87
-     $anyseq                         2
-     $bmux                           2
-     $mux                           79
+   Number of cells:                 17
+     $and                            2
+     $logic_not                      2
+     $mux                            1
+     $neg                            2
      $not                            2
-     $shl                            2
+     $or                             2
+     $shift                          4
+     $shiftx                         2
 
 === design hierarchy ===
 
    top                               1
-     channel_model                   1
+     $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111      1
      rvecc_decode                    1
      rvecc_encode                    1
 
-   Number of wires:                281
-   Number of wire bits:           1095
-   Number of public wires:          37
-   Number of public wire bits:     642
+   Number of wires:                262
+   Number of wire bits:           1249
+   Number of public wires:          53
+   Number of public wire bits:     610
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                344
-     $and                            5
-     $anyseq                        35
+   Number of cells:                310
+     $and                            6
+     $anyseq                        23
      $assert                         7
      $assume                         3
-     $bmux                           2
-     $cover                          7
+     $cover                          8
      $eq                            44
+     $ge                             2
      $le                             2
-     $logic_not                      2
-     $mux                           86
+     $logic_and                      3
+     $logic_not                      4
+     $mux                            4
      $ne                             3
-     $not                           17
+     $neg                            2
+     $not                            7
+     $or                             2
      $reduce_bool                    2
      $reduce_xor                     4
-     $shl                            2
-     $xor                          123
+     $shift                          4
+     $shiftx                         2
+     $xor                          178
 
 6. Executing SMT2 backend.
 
 6.1. Executing BMUXMAP pass.
 
 6.2. Executing DEMUXMAP pass.
-Creating SMT-LIBv2 representation of module channel_model.
+Creating SMT-LIBv2 representation of module $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111.
 Creating SMT-LIBv2 representation of module rvecc_decode.
 Creating SMT-LIBv2 representation of module rvecc_encode.
 Creating SMT-LIBv2 representation of module top.
 
-End of script. Logfile hash: b3d319b4a3, CPU: user 0.02s system 0.00s, MEM: 22.71 MB peak
-Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 62% 2x write_smt2 (0 sec), 28% 2x read_ilang (0 sec), ...
+End of script. Logfile hash: 1c6f1ca909, CPU: user 0.02s system 0.00s, MEM: 15.04 MB peak
+Yosys 0.38+54 (git sha1 f8d4d7128, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
+Time spent: 60% 2x write_smt2 (0 sec), 33% 2x read_ilang (0 sec), ...

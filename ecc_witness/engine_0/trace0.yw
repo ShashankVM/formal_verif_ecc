@@ -3,8 +3,6 @@
   "generator": "smtbmc",
   "clocks": [],
   "signals": [
-    {"path": ["\\channel", "\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_1005"], "width": 25, "offset": 0, "init_only": false},
-    {"path": ["\\channel", "\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_1007"], "width": 25, "offset": 0, "init_only": false},
     {"path": ["\\decoder_en"], "width": 1, "offset": 0, "init_only": false},
     {"path": ["\\din_encoder"], "width": 32, "offset": 0, "init_only": false},
     {"path": ["\\error_pos1"], "width": 6, "offset": 0, "init_only": false},
@@ -12,6 +10,6 @@
     {"path": ["\\sed_ded"], "width": 1, "offset": 0, "init_only": false}
   ],
   "steps": [
-    {"bits": "110000001100100000000000000000000000000000000111111111111111111111111111111111111111111111111111"}
+    {"bits": "0000001000000000000000000000000000000000000011"}
   ]
 }

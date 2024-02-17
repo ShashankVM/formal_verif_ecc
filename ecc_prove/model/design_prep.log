@@ -1,14 +1,25 @@
 
  /----------------------------------------------------------------------------\
  |                                                                            |
- |  yosys -- Yosys Open SYnthesis Suite -- YosysHQ Edition [202302081344]     |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
  |                                                                            |
- |  Copyright (C) 2012 - 2023 YosysHQ GmbH                                    |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
  |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
  |                                                                            |
  \----------------------------------------------------------------------------/
 
- Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
+ Yosys 0.38+54 (git sha1 f8d4d7128, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
 
 
 -- Executing script file `design_prep.ys' --
@@ -20,7 +31,7 @@ Input filename: design.il
 Found 0 SCCs in module top.
 Found 0 SCCs in module rvecc_encode.
 Found 0 SCCs in module rvecc_decode.
-Found 0 SCCs in module channel_model.
+Found 0 SCCs in module $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111.
 Found 0 SCCs.
 
 3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
@@ -33,12 +44,14 @@ Found 0 SCCs.
 Finding unused cells or wires in module \top..
 Finding unused cells or wires in module \rvecc_encode..
 Finding unused cells or wires in module \rvecc_decode..
-Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111..
+Removed 28 unused cells and 28 unused wires.
+<suppressed ~29 debug messages>
 
 7. Executing FORMALFF pass.
 
 8. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111..
 Finding unused cells or wires in module \rvecc_decode..
 Finding unused cells or wires in module \rvecc_encode..
 Finding unused cells or wires in module \top..
@@ -46,11 +59,24 @@ Removed 7 unused cells and 7 unused wires.
 <suppressed ~8 debug messages>
 
 9. Executing CHECK pass (checking for obvious problems).
-Checking module channel_model...
+Checking module $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111...
 Checking module rvecc_decode...
 Checking module rvecc_encode...
 Checking module top...
+Warning: Wire top.\decoder_en is used but has no driver.
 Warning: Wire top.\sed_ded is used but has no driver.
+Warning: Wire top.\error_pos2 [5] is used but has no driver.
+Warning: Wire top.\error_pos2 [4] is used but has no driver.
+Warning: Wire top.\error_pos2 [3] is used but has no driver.
+Warning: Wire top.\error_pos2 [2] is used but has no driver.
+Warning: Wire top.\error_pos2 [1] is used but has no driver.
+Warning: Wire top.\error_pos2 [0] is used but has no driver.
+Warning: Wire top.\error_pos1 [5] is used but has no driver.
+Warning: Wire top.\error_pos1 [4] is used but has no driver.
+Warning: Wire top.\error_pos1 [3] is used but has no driver.
+Warning: Wire top.\error_pos1 [2] is used but has no driver.
+Warning: Wire top.\error_pos1 [1] is used but has no driver.
+Warning: Wire top.\error_pos1 [0] is used but has no driver.
 Warning: Wire top.\din_encoder [31] is used but has no driver.
 Warning: Wire top.\din_encoder [30] is used but has no driver.
 Warning: Wire top.\din_encoder [29] is used but has no driver.
@@ -83,19 +109,6 @@ Warning: Wire top.\din_encoder [3] is used but has no driver.
 Warning: Wire top.\din_encoder [2] is used but has no driver.
 Warning: Wire top.\din_encoder [1] is used but has no driver.
 Warning: Wire top.\din_encoder [0] is used but has no driver.
-Warning: Wire top.\error_pos1 [5] is used but has no driver.
-Warning: Wire top.\error_pos1 [4] is used but has no driver.
-Warning: Wire top.\error_pos1 [3] is used but has no driver.
-Warning: Wire top.\error_pos1 [2] is used but has no driver.
-Warning: Wire top.\error_pos1 [1] is used but has no driver.
-Warning: Wire top.\error_pos1 [0] is used but has no driver.
-Warning: Wire top.\error_pos2 [5] is used but has no driver.
-Warning: Wire top.\error_pos2 [4] is used but has no driver.
-Warning: Wire top.\error_pos2 [3] is used but has no driver.
-Warning: Wire top.\error_pos2 [2] is used but has no driver.
-Warning: Wire top.\error_pos2 [1] is used but has no driver.
-Warning: Wire top.\error_pos2 [0] is used but has no driver.
-Warning: Wire top.\decoder_en is used but has no driver.
 Found and reported 46 problems.
 
 10. Executing SETUNDEF pass (replace undef values with defined constants).
@@ -103,13 +116,13 @@ Found and reported 46 problems.
 11. Executing OPT pass (performing simple optimizations).
 
 11.1. Executing OPT_EXPR pass (perform const folding).
-Optimizing module channel_model.
+Optimizing module $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111.
 Optimizing module rvecc_decode.
 Optimizing module rvecc_encode.
 Optimizing module top.
 
 11.2. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\channel_model'.
+Finding identical cells in module `$paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111'.
 Finding identical cells in module `\rvecc_decode'.
 Finding identical cells in module `\rvecc_encode'.
 Finding identical cells in module `\top'.
@@ -118,27 +131,25 @@ Removed a total of 0 cells.
 11.3. Executing OPT_DFF pass (perform DFF optimizations).
 
 11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111..
 Finding unused cells or wires in module \rvecc_decode..
 Finding unused cells or wires in module \rvecc_encode..
 Finding unused cells or wires in module \top..
-Removed 33 unused cells and 58 unused wires.
-<suppressed ~35 debug messages>
+Removed 0 unused cells and 29 unused wires.
+<suppressed ~1 debug messages>
 
 11.5. Finished fast OPT passes.
 
 12. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \channel_model..
+Finding unused cells or wires in module $paramod\channel_model\DATA_WIDTH=s32'00000000000000000000000000100111..
 Finding unused cells or wires in module \rvecc_decode..
 Finding unused cells or wires in module \rvecc_encode..
 Finding unused cells or wires in module \top..
-Removed 0 unused cells and 2 unused wires.
-<suppressed ~1 debug messages>
 
 13. Executing RTLIL backend.
 Output filename: ../model/design_prep.il
 
 Warnings: 46 unique messages, 46 total
-End of script. Logfile hash: 92fa008adc, CPU: user 0.04s system 0.00s, MEM: 23.20 MB peak
-Yosys 0.26 (git sha1 7e588664e, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 29% 4x opt_clean (0 sec), 17% 1x check (0 sec), ...
+End of script. Logfile hash: f0d630dec9, CPU: user 0.04s system 0.00s, MEM: 15.04 MB peak
+Yosys 0.38+54 (git sha1 f8d4d7128, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
+Time spent: 30% 4x opt_clean (0 sec), 14% 1x opt_expr (0 sec), ...

@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Sat Feb 17 16:42:47 2024
+[*]
+[dumpfile] "/home/shashank/formal_verif_ecc/ecc_witness/engine_0/trace0.vcd"
+[dumpfile_mtime] "Sat Feb 17 16:07:41 2024"
+[dumpfile_size] 3218
+[savefile] "/home/shashank/formal_verif_ecc/ecc_witness/engine_0/waveform.gtkw"
+[timestart] 0
+[size] 1920 1007
+[pos] -461 -204
+*-1.743538 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 211
+[signals_width] 198
+[sst_expanded] 1
+[sst_vpaned_height] 285
+@28
+top.COVER_ERROR_0_POS_EN
+top.COVER_NON_0_EN
+top.COVER_SED_DED_ZERO_EN
+@22
+top.din_encoder[31:0]
+top.din_decoder[31:0]
+top.received_data[38:0]
+top.corrected_data[38:0]
+@29
+top.sed_ded
+[pattern_trace] 1
+[pattern_trace] 0

@@ -30,13 +30,23 @@ module top;
       ASSERT_DOUBLE_ED:          assert (double_ecc_error == 1'b1);
     end
 
+    // cover data is zero
     COVER_ALL_0: cover (encoded_data == 32'h0000);
+
+    // cover data is non-zero
     COVER_NON_0: cover (encoded_data != 32'h0000);
+
+    // cover a few error position combinations
     COVER_ERROR_0_POS: cover (error_pos1 ==  6'd0);
     COVER_ERROR_38_POS: cover (error_pos1 == 6'd38);
     COVER_ERROR_9_POS: cover (error_pos1 == 6'd9);
     COVER_ERROR_24_POS: cover (error_pos1 == 6'd24);
+
+    // cover single error detection and correction
     COVER_SED_DED_ZERO: cover (sed_ded == 1'b0);
+
+    // cover double error detection
+    COVER_SED_DED_ONE: cover (sed_ded == 1'b1);
   end
 
 endmodule

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-<testsuite timestamp="2023-02-24T17:01:59" hostname="shashank-Latitude-3520" package="ecc" id="0" name="bmc" tests="14" errors="0" failures="0" time="590" skipped="7">
+<testsuite timestamp="2024-02-17T21:48:40" hostname="shashank-Latitude-3520" package="ecc" id="0" name="bmc" tests="15" errors="0" failures="0" time="1350" skipped="8">
 <properties>
 <property name="os" value="Linux"/>
 <property name="expect" value="PASS"/>
@@ -8,213 +8,201 @@
 </properties>
 <testcase classname="bmc" name="build execution" time="0">
 </testcase>
-<testcase classname="bmc" name="Property ASSERT in top at top.sv:28" time="0" type="ASSERT" location="top.sv:28" id="ASSERT_DATA_NOT_RECOVERED">
+<testcase classname="bmc" name="Property ASSERT in top at top.sv:28.7-28.73" time="0" type="ASSERT" location="top.sv:28.7-28.73" id="ASSERT_DATA_NOT_RECOVERED">
 </testcase>
-<testcase classname="bmc" name="Property ASSERT in top at top.sv:24" time="0" type="ASSERT" location="top.sv:24" id="ASSERT_DATA_RECOVERED">
+<testcase classname="bmc" name="Property ASSERT in top at top.sv:24.7-24.69" time="0" type="ASSERT" location="top.sv:24.7-24.69" id="ASSERT_DATA_RECOVERED">
 </testcase>
-<testcase classname="bmc" name="Property ASSERT in top at top.sv:30" time="0" type="ASSERT" location="top.sv:30" id="ASSERT_DOUBLE_ED">
+<testcase classname="bmc" name="Property ASSERT in top at top.sv:30.7-30.67" time="0" type="ASSERT" location="top.sv:30.7-30.67" id="ASSERT_DOUBLE_ED">
 </testcase>
-<testcase classname="bmc" name="Property ASSERT in top at top.sv:21" time="0" type="ASSERT" location="top.sv:21" id="ASSERT_ERROR_PRESENT">
+<testcase classname="bmc" name="Property ASSERT in top at top.sv:21.5-21.68" time="0" type="ASSERT" location="top.sv:21.5-21.68" id="ASSERT_ERROR_PRESENT">
 </testcase>
-<testcase classname="bmc" name="Property ASSERT in top at top.sv:26" time="0" type="ASSERT" location="top.sv:26" id="ASSERT_NO_DOUBLE_ED">
+<testcase classname="bmc" name="Property ASSERT in top at top.sv:26.7-26.63" time="0" type="ASSERT" location="top.sv:26.7-26.63" id="ASSERT_NO_DOUBLE_ED">
 </testcase>
-<testcase classname="bmc" name="Property ASSERT in top at top.sv:29" time="0" type="ASSERT" location="top.sv:29" id="ASSERT_NO_SINGLE_ECC">
+<testcase classname="bmc" name="Property ASSERT in top at top.sv:29.7-29.67" time="0" type="ASSERT" location="top.sv:29.7-29.67" id="ASSERT_NO_SINGLE_ECC">
 </testcase>
-<testcase classname="bmc" name="Property ASSERT in top at top.sv:25" time="0" type="ASSERT" location="top.sv:25" id="ASSERT_SINGLE_ECC">
+<testcase classname="bmc" name="Property ASSERT in top at top.sv:25.7-25.63" time="0" type="ASSERT" location="top.sv:25.7-25.63" id="ASSERT_SINGLE_ECC">
 </testcase>
-<testcase classname="bmc" name="Property COVER in top at top.sv:33" time="0" type="COVER" location="top.sv:33" id="COVER_ALL_0">
+<testcase classname="bmc" name="Property COVER in top at top.sv:34.5-34.50" time="0" type="COVER" location="top.sv:34.5-34.50" id="COVER_ALL_0">
 <skipped />
 </testcase>
-<testcase classname="bmc" name="Property COVER in top at top.sv:35" time="0" type="COVER" location="top.sv:35" id="COVER_ERROR_0_POS">
+<testcase classname="bmc" name="Property COVER in top at top.sv:40.5-40.51" time="0" type="COVER" location="top.sv:40.5-40.51" id="COVER_ERROR_0_POS">
 <skipped />
 </testcase>
-<testcase classname="bmc" name="Property COVER in top at top.sv:38" time="0" type="COVER" location="top.sv:38" id="COVER_ERROR_24_POS">
+<testcase classname="bmc" name="Property COVER in top at top.sv:43.5-43.52" time="0" type="COVER" location="top.sv:43.5-43.52" id="COVER_ERROR_24_POS">
 <skipped />
 </testcase>
-<testcase classname="bmc" name="Property COVER in top at top.sv:36" time="0" type="COVER" location="top.sv:36" id="COVER_ERROR_38_POS">
+<testcase classname="bmc" name="Property COVER in top at top.sv:41.5-41.52" time="0" type="COVER" location="top.sv:41.5-41.52" id="COVER_ERROR_38_POS">
 <skipped />
 </testcase>
-<testcase classname="bmc" name="Property COVER in top at top.sv:37" time="0" type="COVER" location="top.sv:37" id="COVER_ERROR_9_POS">
+<testcase classname="bmc" name="Property COVER in top at top.sv:42.5-42.50" time="0" type="COVER" location="top.sv:42.5-42.50" id="COVER_ERROR_9_POS">
 <skipped />
 </testcase>
-<testcase classname="bmc" name="Property COVER in top at top.sv:34" time="0" type="COVER" location="top.sv:34" id="COVER_NON_0">
+<testcase classname="bmc" name="Property COVER in top at top.sv:37.5-37.50" time="0" type="COVER" location="top.sv:37.5-37.50" id="COVER_NON_0">
 <skipped />
 </testcase>
-<testcase classname="bmc" name="Property COVER in top at top.sv:39" time="0" type="COVER" location="top.sv:39" id="COVER_SED_DED_ZERO">
+<testcase classname="bmc" name="Property COVER in top at top.sv:49.5-49.47" time="0" type="COVER" location="top.sv:49.5-49.47" id="COVER_SED_DED_ONE">
 <skipped />
 </testcase>
-<system-out>SBY 16:52:08 [ecc_bmc] Removing directory '/home/shashank/formal_verif_ecc/ecc_bmc'.
-SBY 16:52:08 [ecc_bmc] Copy '/home/shashank/formal_verif_ecc/rvecc_encode.sv' to '/home/shashank/formal_verif_ecc/ecc_bmc/src/rvecc_encode.sv'.
-SBY 16:52:08 [ecc_bmc] Copy '/home/shashank/formal_verif_ecc/rvecc_decode.sv' to '/home/shashank/formal_verif_ecc/ecc_bmc/src/rvecc_decode.sv'.
-SBY 16:52:08 [ecc_bmc] Copy '/home/shashank/formal_verif_ecc/channel_model.sv' to '/home/shashank/formal_verif_ecc/ecc_bmc/src/channel_model.sv'.
-SBY 16:52:08 [ecc_bmc] Copy '/home/shashank/formal_verif_ecc/top.sv' to '/home/shashank/formal_verif_ecc/ecc_bmc/src/top.sv'.
-SBY 16:52:08 [ecc_bmc] engine_0: smtbmc boolector
-SBY 16:52:08 [ecc_bmc] base: starting process &quot;cd ecc_bmc/src; yosys -ql ../model/design.log ../model/design.ys&quot;
-SBY 16:52:08 [ecc_bmc] base: This is an EVALUATION LICENSE of Tabby CAD Suite.
-SBY 16:52:08 [ecc_bmc] base: This license is granted for the limited purpose of evaluating Tabby CAD Suite only.
-SBY 16:52:08 [ecc_bmc] base: This license was issued to Shashank V M.
-SBY 16:52:08 [ecc_bmc] base: Customer PoC: Shashank V M &lt;shashankmathew8@gmail.com&gt;.
-SBY 16:52:08 [ecc_bmc] base: VERIFIC-WARNING [VDB-1002] top.sv:2: net 'din_encoder[31]' does not have a driver
-SBY 16:52:08 [ecc_bmc] base: VERIFIC-WARNING [VDB-1002] top.sv:4: net 'error_pos1[5]' does not have a driver
-SBY 16:52:08 [ecc_bmc] base: VERIFIC-WARNING [VDB-1002] top.sv:4: net 'error_pos2[5]' does not have a driver
-SBY 16:52:08 [ecc_bmc] base: VERIFIC-WARNING [VDB-1002] top.sv:5: net 'decoder_en' does not have a driver
-SBY 16:52:08 [ecc_bmc] base: VERIFIC-WARNING [VDB-1002] top.sv:5: net 'sed_ded' does not have a driver
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\sed_ded is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\decoder_en is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [31] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [30] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [29] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [28] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [27] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [26] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [25] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [24] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [23] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [22] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [21] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [20] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [19] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [18] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [17] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [16] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [15] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [14] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [13] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [12] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [11] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [10] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [9] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [8] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [7] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [6] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [5] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [4] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [3] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [2] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [1] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\din_encoder [0] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos1 [5] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos1 [4] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos1 [3] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos1 [2] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos1 [1] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos1 [0] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos2 [5] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos2 [4] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos2 [3] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos2 [2] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos2 [1] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: Warning: Wire top.\error_pos2 [0] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] base: finished (returncode=0)
-SBY 16:52:08 [ecc_bmc] prep: starting process &quot;cd ecc_bmc/model; yosys -ql design_prep.log design_prep.ys&quot;
-SBY 16:52:08 [ecc_bmc] prep: This is an EVALUATION LICENSE of Tabby CAD Suite.
-SBY 16:52:08 [ecc_bmc] prep: This license is granted for the limited purpose of evaluating Tabby CAD Suite only.
-SBY 16:52:08 [ecc_bmc] prep: This license was issued to Shashank V M.
-SBY 16:52:08 [ecc_bmc] prep: Customer PoC: Shashank V M &lt;shashankmathew8@gmail.com&gt;.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\sed_ded is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [31] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [30] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [29] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [28] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [27] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [26] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [25] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [24] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [23] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [22] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [21] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [20] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [19] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [18] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [17] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [16] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [15] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [14] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [13] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [12] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [11] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [10] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [9] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [8] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [7] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [6] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [5] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [4] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [3] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [2] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [1] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\din_encoder [0] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [5] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [4] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [3] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [2] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [1] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [0] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [5] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [4] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [3] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [2] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [1] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [0] is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: Warning: Wire top.\decoder_en is used but has no driver.
-SBY 16:52:08 [ecc_bmc] prep: finished (returncode=0)
-SBY 16:52:08 [ecc_bmc] smt2: starting process &quot;cd ecc_bmc/model; yosys -ql design_smt2.log design_smt2.ys&quot;
-SBY 16:52:08 [ecc_bmc] smt2: This is an EVALUATION LICENSE of Tabby CAD Suite.
-SBY 16:52:08 [ecc_bmc] smt2: This license is granted for the limited purpose of evaluating Tabby CAD Suite only.
-SBY 16:52:08 [ecc_bmc] smt2: This license was issued to Shashank V M.
-SBY 16:52:08 [ecc_bmc] smt2: Customer PoC: Shashank V M &lt;shashankmathew8@gmail.com&gt;.
-SBY 16:52:08 [ecc_bmc] smt2: finished (returncode=0)
-SBY 16:52:08 [ecc_bmc] engine_0: starting process &quot;cd ecc_bmc; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
-SBY 16:52:08 [ecc_bmc] engine_0: ##   0:00:00  Solver: boolector
-SBY 16:52:08 [ecc_bmc] engine_0: ##   0:00:00  Checking assumptions in step 0..
-SBY 16:52:08 [ecc_bmc] engine_0: ##   0:00:00  Checking assertions in step 0..
-SBY 16:52:29 [ecc_bmc] engine_0: ##   0:00:21  Checking assumptions in step 1..
-SBY 16:52:29 [ecc_bmc] engine_0: ##   0:00:21  Checking assertions in step 1..
-SBY 16:53:02 [ecc_bmc] engine_0: ##   0:00:53  Checking assumptions in step 2..
-SBY 16:53:02 [ecc_bmc] engine_0: ##   0:00:53  Checking assertions in step 2..
-SBY 16:53:40 [ecc_bmc] engine_0: ##   0:01:31  Checking assumptions in step 3..
-SBY 16:53:40 [ecc_bmc] engine_0: ##   0:01:31  Checking assertions in step 3..
-SBY 16:53:58 [ecc_bmc] engine_0: ##   0:01:49  Checking assumptions in step 4..
-SBY 16:53:58 [ecc_bmc] engine_0: ##   0:01:49  Checking assertions in step 4..
-SBY 16:54:25 [ecc_bmc] engine_0: ##   0:02:17  Checking assumptions in step 5..
-SBY 16:54:25 [ecc_bmc] engine_0: ##   0:02:17  Checking assertions in step 5..
-SBY 16:54:44 [ecc_bmc] engine_0: ##   0:02:35  Checking assumptions in step 6..
-SBY 16:54:44 [ecc_bmc] engine_0: ##   0:02:35  Checking assertions in step 6..
-SBY 16:55:33 [ecc_bmc] engine_0: ##   0:03:25  Checking assumptions in step 7..
-SBY 16:55:33 [ecc_bmc] engine_0: ##   0:03:25  Checking assertions in step 7..
-SBY 16:55:53 [ecc_bmc] engine_0: ##   0:03:44  Checking assumptions in step 8..
-SBY 16:55:53 [ecc_bmc] engine_0: ##   0:03:44  Checking assertions in step 8..
-SBY 16:56:12 [ecc_bmc] engine_0: ##   0:04:03  Checking assumptions in step 9..
-SBY 16:56:12 [ecc_bmc] engine_0: ##   0:04:03  Checking assertions in step 9..
-SBY 16:56:48 [ecc_bmc] engine_0: ##   0:04:39  Checking assumptions in step 10..
-SBY 16:56:48 [ecc_bmc] engine_0: ##   0:04:39  Checking assertions in step 10..
-SBY 16:57:41 [ecc_bmc] engine_0: ##   0:05:32  Checking assumptions in step 11..
-SBY 16:57:41 [ecc_bmc] engine_0: ##   0:05:32  Checking assertions in step 11..
-SBY 16:58:20 [ecc_bmc] engine_0: ##   0:06:11  Checking assumptions in step 12..
-SBY 16:58:20 [ecc_bmc] engine_0: ##   0:06:11  Checking assertions in step 12..
-SBY 16:58:26 [ecc_bmc] engine_0: ##   0:06:17  Checking assumptions in step 13..
-SBY 16:58:26 [ecc_bmc] engine_0: ##   0:06:17  Checking assertions in step 13..
-SBY 16:59:26 [ecc_bmc] engine_0: ##   0:07:17  waiting for solver (1 minute)
-SBY 16:59:32 [ecc_bmc] engine_0: ##   0:07:23  Checking assumptions in step 14..
-SBY 16:59:32 [ecc_bmc] engine_0: ##   0:07:23  Checking assertions in step 14..
-SBY 17:00:25 [ecc_bmc] engine_0: ##   0:08:16  Checking assumptions in step 15..
-SBY 17:00:25 [ecc_bmc] engine_0: ##   0:08:16  Checking assertions in step 15..
-SBY 17:00:29 [ecc_bmc] engine_0: ##   0:08:21  Checking assumptions in step 16..
-SBY 17:00:29 [ecc_bmc] engine_0: ##   0:08:21  Checking assertions in step 16..
-SBY 17:00:35 [ecc_bmc] engine_0: ##   0:08:26  Checking assumptions in step 17..
-SBY 17:00:35 [ecc_bmc] engine_0: ##   0:08:26  Checking assertions in step 17..
-SBY 17:01:24 [ecc_bmc] engine_0: ##   0:09:15  Checking assumptions in step 18..
-SBY 17:01:24 [ecc_bmc] engine_0: ##   0:09:15  Checking assertions in step 18..
-SBY 17:01:46 [ecc_bmc] engine_0: ##   0:09:37  Checking assumptions in step 19..
-SBY 17:01:46 [ecc_bmc] engine_0: ##   0:09:37  Checking assertions in step 19..
-SBY 17:01:59 [ecc_bmc] engine_0: ##   0:09:50  Status: passed
-SBY 17:01:59 [ecc_bmc] engine_0: finished (returncode=0)
-SBY 17:01:59 [ecc_bmc] engine_0: Status returned by engine: pass
-SBY 17:01:59 [ecc_bmc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:09:50 (590)
-SBY 17:01:59 [ecc_bmc] summary: Elapsed process time [H:MM:SS (secs)]: 0:09:50 (590)
-SBY 17:01:59 [ecc_bmc] summary: engine_0 (smtbmc boolector) returned pass
-SBY 17:01:59 [ecc_bmc] summary: engine_0 did not produce any traces
-SBY 17:01:59 [ecc_bmc] DONE (PASS, rc=0)
+<testcase classname="bmc" name="Property COVER in top at top.sv:46.5-46.48" time="0" type="COVER" location="top.sv:46.5-46.48" id="COVER_SED_DED_ZERO">
+<skipped />
+</testcase>
+<system-out>SBY 21:37:40 [ecc_witness] Removing directory '/home/shashank/formal_verif_ecc/ecc_witness'.
+SBY 21:37:40 [ecc_bmc] Removing directory '/home/shashank/formal_verif_ecc/ecc_bmc'.
+SBY 21:37:40 [ecc_bmc] Copy '/home/shashank/formal_verif_ecc/rvecc_encode.sv' to '/home/shashank/formal_verif_ecc/ecc_bmc/src/rvecc_encode.sv'.
+SBY 21:37:40 [ecc_bmc] Copy '/home/shashank/formal_verif_ecc/rvecc_decode.sv' to '/home/shashank/formal_verif_ecc/ecc_bmc/src/rvecc_decode.sv'.
+SBY 21:37:40 [ecc_bmc] Copy '/home/shashank/formal_verif_ecc/channel_model.sv' to '/home/shashank/formal_verif_ecc/ecc_bmc/src/channel_model.sv'.
+SBY 21:37:40 [ecc_bmc] Copy '/home/shashank/formal_verif_ecc/top.sv' to '/home/shashank/formal_verif_ecc/ecc_bmc/src/top.sv'.
+SBY 21:37:40 [ecc_bmc] engine_0: smtbmc boolector
+SBY 21:37:40 [ecc_bmc] base: starting process &quot;cd ecc_bmc/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\decoder_en is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos2 [5] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos2 [4] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos2 [3] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos2 [2] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos2 [1] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos2 [0] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\sed_ded is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos1 [5] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos1 [4] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos1 [3] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos1 [2] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos1 [1] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\error_pos1 [0] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [31] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [30] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [29] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [28] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [27] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [26] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [25] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [24] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [23] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [22] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [21] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [20] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [19] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [18] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [17] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [16] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [15] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [14] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [13] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [12] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [11] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [10] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [9] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [8] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [7] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [6] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [5] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [4] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [3] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [2] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [1] is used but has no driver.
+SBY 21:37:40 [ecc_bmc] base: Warning: Wire top.\din_encoder [0] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] base: finished (returncode=0)
+SBY 21:37:41 [ecc_bmc] prep: starting process &quot;cd ecc_bmc/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\decoder_en is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\sed_ded is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [5] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [4] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [3] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [2] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [1] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos2 [0] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [5] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [4] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [3] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [2] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [1] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\error_pos1 [0] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [31] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [30] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [29] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [28] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [27] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [26] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [25] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [24] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [23] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [22] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [21] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [20] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [19] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [18] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [17] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [16] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [15] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [14] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [13] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [12] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [11] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [10] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [9] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [8] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [7] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [6] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [5] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [4] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [3] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [2] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [1] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: Warning: Wire top.\din_encoder [0] is used but has no driver.
+SBY 21:37:41 [ecc_bmc] prep: finished (returncode=0)
+SBY 21:37:41 [ecc_bmc] smt2: starting process &quot;cd ecc_bmc/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 21:37:41 [ecc_bmc] smt2: finished (returncode=0)
+SBY 21:37:41 [ecc_bmc] engine_0: starting process &quot;cd ecc_bmc; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 21:37:41 [ecc_bmc] engine_0: ##   0:00:00  Solver: boolector
+SBY 21:37:41 [ecc_bmc] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 21:37:41 [ecc_bmc] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 21:38:05 [ecc_bmc] engine_0: ##   0:00:23  Checking assumptions in step 1..
+SBY 21:38:05 [ecc_bmc] engine_0: ##   0:00:23  Checking assertions in step 1..
+SBY 21:39:05 [ecc_bmc] engine_0: ##   0:01:23  waiting for solver (1 minute)
+SBY 21:39:12 [ecc_bmc] engine_0: ##   0:01:31  Checking assumptions in step 2..
+SBY 21:39:12 [ecc_bmc] engine_0: ##   0:01:31  Checking assertions in step 2..
+SBY 21:39:50 [ecc_bmc] engine_0: ##   0:02:09  Checking assumptions in step 3..
+SBY 21:39:50 [ecc_bmc] engine_0: ##   0:02:09  Checking assertions in step 3..
+SBY 21:40:23 [ecc_bmc] engine_0: ##   0:02:41  Checking assumptions in step 4..
+SBY 21:40:23 [ecc_bmc] engine_0: ##   0:02:42  Checking assertions in step 4..
+SBY 21:41:12 [ecc_bmc] engine_0: ##   0:03:30  Checking assumptions in step 5..
+SBY 21:41:12 [ecc_bmc] engine_0: ##   0:03:30  Checking assertions in step 5..
+SBY 21:41:36 [ecc_bmc] engine_0: ##   0:03:55  Checking assumptions in step 6..
+SBY 21:41:37 [ecc_bmc] engine_0: ##   0:03:55  Checking assertions in step 6..
+SBY 21:41:55 [ecc_bmc] engine_0: ##   0:04:14  Checking assumptions in step 7..
+SBY 21:41:55 [ecc_bmc] engine_0: ##   0:04:14  Checking assertions in step 7..
+SBY 21:42:23 [ecc_bmc] engine_0: ##   0:04:42  Checking assumptions in step 8..
+SBY 21:42:23 [ecc_bmc] engine_0: ##   0:04:42  Checking assertions in step 8..
+SBY 21:43:05 [ecc_bmc] engine_0: ##   0:05:23  Checking assumptions in step 9..
+SBY 21:43:05 [ecc_bmc] engine_0: ##   0:05:24  Checking assertions in step 9..
+SBY 21:43:37 [ecc_bmc] engine_0: ##   0:05:56  Checking assumptions in step 10..
+SBY 21:43:37 [ecc_bmc] engine_0: ##   0:05:56  Checking assertions in step 10..
+SBY 21:43:59 [ecc_bmc] engine_0: ##   0:06:18  Checking assumptions in step 11..
+SBY 21:43:59 [ecc_bmc] engine_0: ##   0:06:18  Checking assertions in step 11..
+SBY 21:44:33 [ecc_bmc] engine_0: ##   0:06:51  Checking assumptions in step 12..
+SBY 21:44:33 [ecc_bmc] engine_0: ##   0:06:52  Checking assertions in step 12..
+SBY 21:44:40 [ecc_bmc] engine_0: ##   0:06:59  Checking assumptions in step 13..
+SBY 21:44:41 [ecc_bmc] engine_0: ##   0:06:59  Checking assertions in step 13..
+SBY 21:45:17 [ecc_bmc] engine_0: ##   0:07:36  Checking assumptions in step 14..
+SBY 21:45:17 [ecc_bmc] engine_0: ##   0:07:36  Checking assertions in step 14..
+SBY 21:45:22 [ecc_bmc] engine_0: ##   0:07:41  Checking assumptions in step 15..
+SBY 21:45:23 [ecc_bmc] engine_0: ##   0:07:41  Checking assertions in step 15..
+SBY 21:46:00 [ecc_bmc] engine_0: ##   0:08:19  Checking assumptions in step 16..
+SBY 21:46:00 [ecc_bmc] engine_0: ##   0:08:19  Checking assertions in step 16..
+SBY 21:46:43 [ecc_bmc] engine_0: ##   0:09:02  Checking assumptions in step 17..
+SBY 21:46:43 [ecc_bmc] engine_0: ##   0:09:02  Checking assertions in step 17..
+SBY 21:46:49 [ecc_bmc] engine_0: ##   0:09:08  Checking assumptions in step 18..
+SBY 21:46:49 [ecc_bmc] engine_0: ##   0:09:08  Checking assertions in step 18..
+SBY 21:47:49 [ecc_bmc] engine_0: ##   0:10:08  waiting for solver (1 minute)
+SBY 21:47:52 [ecc_bmc] engine_0: ##   0:10:11  Checking assumptions in step 19..
+SBY 21:47:53 [ecc_bmc] engine_0: ##   0:10:11  Checking assertions in step 19..
+SBY 21:48:40 [ecc_bmc] engine_0: ##   0:10:59  Status: passed
+SBY 21:48:40 [ecc_bmc] engine_0: finished (returncode=0)
+SBY 21:48:40 [ecc_bmc] engine_0: Status returned by engine: pass
+SBY 21:48:40 [ecc_bmc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:10:59 (659)
+SBY 21:48:40 [ecc_bmc] summary: Elapsed process time [H:MM:SS (secs)]: 0:22:30 (1350)
+SBY 21:48:40 [ecc_bmc] summary: engine_0 (smtbmc boolector) returned pass
+SBY 21:48:40 [ecc_bmc] summary: engine_0 did not produce any traces
+SBY 21:48:40 [ecc_bmc] DONE (PASS, rc=0)
 </system-out>
 <system-err>
 </system-err>
