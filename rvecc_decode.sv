@@ -48,7 +48,7 @@ module rvecc_decode  (
    genvar i;
    generate
    for (i=1; i<40; i = i + 1) begin
-      always_comb error_mask[i-1] = (ecc_check[5:0] == i);
+      assign error_mask[i-1] = (ecc_check[5:0] == i);
    end
    endgenerate
    // Generate the corrected data
