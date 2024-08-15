@@ -14,39 +14,41 @@ module top;
   channel_model #(39) channel(.din(encoded_data), .dout(received_data), .*);
   rvecc_decode decoder(.en(decoder_en), .din(din_decoder), .ecc_in(ecc_in_decoder), .dout(dout_decoder), .ecc_out(ecc_out_decoder), .*);
 
-  always_comb begin
-    ASSUME_VALID_ERROR_POS1: assume ((error_pos1 <= 38) && (error_pos1 >= 0));
-    ASSUME_VALID_ERROR_POS2: assume ((error_pos2 <= 38) && (error_pos2 >= 0) && (error_pos1 != error_pos2));
-    ASSUME_DECODER_ENABLE:   assume (decoder_en == 1'b1);
-    ASSERT_ERROR_PRESENT:    assert (encoded_data != received_data);
+      ASSUME_VALID_ERROR_POS1: assume property ((error_pos1 <= 38) && (error_pos1 >= 0));
+    ASSUME_VALID_ERROR_POS2: assume property ((error_pos2 <= 38) && (error_pos2 >= 0) && (error_pos1 != error_pos2));
+    ASSUME_DECODER_ENABLE:   assume property (decoder_en == 1'b1);
+    ASSERT_ERROR_PRESENT:    assert property (encoded_data != received_data);
 
-    if (sed_ded == 0) begin
-      ASSERT_DATA_RECOVERED: assert (corrected_data == encoded_data);
-      ASSERT_SINGLE_ECC:     assert (single_ecc_error == 1'b1);
-      ASSERT_NO_DOUBLE_ED:   assert (double_ecc_error == 1'b0);
-    end else begin
-      ASSERT_DATA_NOT_RECOVERED: assert (corrected_data != encoded_data);
-      ASSERT_NO_SINGLE_ECC:      assert (single_ecc_error == 1'b0);
-      ASSERT_DOUBLE_ED:          assert (double_ecc_error == 1'b1);
-    end
 
-    // cover data is zero
-    COVER_ALL_0: cover (encoded_data == 32'h0000);
+     ASSERT_DATA_RECOVERED: assert property (!sed_ded |-> corrected_data == encoded_data);
+     ASSERT_SINGLE_ECC:     assert property (!sed_ded |-> single_ecc_error == 1'b1);
+     ASSERT_NO_DOUBLE_ED:   assert property (!sed_ded |-> double_ecc_error == 1'b0);
+
+      ASSERT_DATA_NOT_RECOVERED: assert property (sed_ded |-> corrected_data != encoded_data);
+      ASSERT_NO_SINGLE_ECC:      assert property (sed_ded |-> single_ecc_error == 1'b0);
+      ASSERT_DOUBLE_ED:          assert property (sed_ded |-> double_ecc_error == 1'b1);
+
+
+
+
+
+
+      // cover data is zero
+    COVER_ALL_0: cover property (encoded_data == 32'h0000);
 
     // cover data is non-zero
-    COVER_NON_0: cover (encoded_data != 32'h0000);
+    COVER_NON_0: cover property (encoded_data != 32'h0000);
 
     // cover a few error position combinations
-    COVER_ERROR_0_POS: cover (error_pos1 ==  6'd0);
-    COVER_ERROR_38_POS: cover (error_pos1 == 6'd38);
-    COVER_ERROR_9_POS: cover (error_pos1 == 6'd9);
-    COVER_ERROR_24_POS: cover (error_pos1 == 6'd24);
+    COVER_ERROR_0_POS: cover property (error_pos1 ==  6'd0);
+    COVER_ERROR_38_POS: cover property (error_pos1 == 6'd38);
+    COVER_ERROR_9_POS: cover property (error_pos1 == 6'd9);
+    COVER_ERROR_24_POS: cover property (error_pos1 == 6'd24);
 
     // cover single error detection and correction
-    COVER_SED_DED_ZERO: cover (sed_ded == 1'b0);
+    COVER_SED_DED_ZERO: cover property (sed_ded == 1'b0);
 
     // cover double error detection
-    COVER_SED_DED_ONE: cover (sed_ded == 1'b1);
-  end
+    COVER_SED_DED_ONE: cover property (sed_ded == 1'b1);
 
 endmodule
