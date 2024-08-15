@@ -45,10 +45,12 @@ module rvecc_decode  (
    assign double_ecc_error = en & (ecc_check[6:0] != 0) & ~ecc_check[6];  // all errors in the sed_ded case will be recorded as DE
 
    // Generate the mask for error correctiong
-   for (genvar i=1; i<40; i++) begin
-      assign error_mask[i-1] = (ecc_check[5:0] == i);
+   genvar i;
+   generate
+   for (i=1; i<40; i = i + 1) begin
+      always_comb error_mask[i-1] = (ecc_check[5:0] == i);
    end
-
+   endgenerate
    // Generate the corrected data
    assign din_plus_parity[38:0] = {ecc_in[6], din[31:26], ecc_in[5], din[25:11], ecc_in[4], din[10:4], ecc_in[3], din[3:1], ecc_in[2], din[0], ecc_in[1:0]};
 
