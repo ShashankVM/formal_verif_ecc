@@ -11,8 +11,8 @@ module top;
   assign corrected_data = {ecc_out_decoder, dout_decoder};
 
   rvecc_encode encoder(.din(din_encoder), .ecc_out(ecc_out_encoder));
-  channel_model #(39) channel(.din(encoded_data), .dout(received_data), .*);
-  rvecc_decode decoder(.en(decoder_en), .din(din_decoder), .ecc_in(ecc_in_decoder), .dout(dout_decoder), .ecc_out(ecc_out_decoder), .*);
+  channel_model #(39) channel(.din(encoded_data), .sed_ded(sed_ded), .error_pos1(error_pos1), .error_pos2(error_pos2),  .dout(received_data));
+  rvecc_decode decoder(.en(decoder_en), .din(din_decoder), .ecc_in(ecc_in_decoder), .sed_ded(sed_ded), .dout(dout_decoder), .ecc_out(ecc_out_decoder), .single_ecc_error(single_ecc_error), .double_ecc_error(double_ecc_error));
 
       ASSUME_VALID_ERROR_POS1: assume property ((error_pos1 <= 38) && (error_pos1 >= 0));
     ASSUME_VALID_ERROR_POS2: assume property ((error_pos2 <= 38) && (error_pos2 >= 0) && (error_pos1 != error_pos2));
