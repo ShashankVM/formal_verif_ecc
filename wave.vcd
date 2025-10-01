@@ -1,0 +1,92 @@
+$date
+  Wed Oct  1 13:04:32 2025
+$end
+$timescale
+  1ns
+$end
+$scope module top $end
+  $var reg 32 top.din_encoder din_encoder [31:0] $end
+  $var wire 32 top.din_decoder din_decoder [31:0] $end
+  $var wire 32 top.dout_decoder dout_decoder [31:0] $end
+  $var wire 7 top.ecc_out_encoder ecc_out_encoder [6:0] $end
+  $var wire 7 top.ecc_in_decoder ecc_in_decoder [6:0] $end
+  $var wire 7 top.ecc_out_decoder ecc_out_decoder [6:0] $end
+  $var reg 6 top.error_pos1 error_pos1 [5:0] $end
+  $var reg 6 top.error_pos2 error_pos2 [5:0] $end
+  $var wire 1 top.decoder_en decoder_en [0:0] $end
+  $var reg 1 top.sed_ded sed_ded [0:0] $end
+  $var wire 1 top.single_ecc_error single_ecc_error [0:0] $end
+  $var wire 1 top.double_ecc_error double_ecc_error [0:0] $end
+  $var reg 1 top.error_inject error_inject [0:0] $end
+  $var wire 39 top.encoded_data encoded_data [38:0] $end
+  $var reg 39 top.received_data received_data [38:0] $end
+  $var wire 39 top.corrected_data corrected_data [38:0] $end
+  $scope module channel $end
+    $var wire 32 top.channel.DATA_WIDTH DATA_WIDTH [31:0] $end
+    $var wire 39 top.channel.din din [38:0] $end
+    $var wire 1 top.channel.sed_ded sed_ded $end
+    $var wire 1 top.channel.error_inject error_inject $end
+    $var wire 6 top.channel.error_pos1 error_pos1 [5:0] $end
+    $var wire 6 top.channel.error_pos2 error_pos2 [5:0] $end
+    $var wire 39 top.channel.dout dout [38:0] $end
+  $upscope $end
+  $scope module decoder $end
+    $var wire 1 top.decoder.en en $end
+    $var wire 32 top.decoder.din din [31:0] $end
+    $var wire 7 top.decoder.ecc_in ecc_in [6:0] $end
+    $var wire 1 top.decoder.sed_ded sed_ded $end
+    $var wire 32 top.decoder.dout dout [31:0] $end
+    $var wire 7 top.decoder.ecc_out ecc_out [6:0] $end
+    $var wire 1 top.decoder.single_ecc_error single_ecc_error $end
+    $var wire 1 top.decoder.double_ecc_error double_ecc_error $end
+    $var wire 7 top.decoder.ecc_check ecc_check [6:0] $end
+    $var wire 39 top.decoder.error_mask error_mask [38:0] $end
+    $var wire 39 top.decoder.din_plus_parity din_plus_parity [38:0] $end
+    $var wire 39 top.decoder.dout_plus_parity dout_plus_parity [38:0] $end
+  $upscope $end
+  $scope module encoder $end
+    $var wire 32 top.encoder.din din [31:0] $end
+    $var wire 7 top.encoder.ecc_out ecc_out [6:0] $end
+    $var wire 6 top.encoder.ecc_out_temp ecc_out_temp [5:0] $end
+  $upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b00000000000000000000000000000000 top.din_encoder
+b01000000000000000100000000000000 top.din_decoder
+b01000000000000000100000000000000 top.dout_decoder
+b0000000 top.ecc_out_encoder
+b0000000 top.ecc_in_decoder
+b0000000 top.ecc_out_decoder
+b011110 top.error_pos1
+b001110 top.error_pos2
+b1 top.decoder_en
+b1 top.sed_ded
+b0 top.single_ecc_error
+b1 top.double_ecc_error
+b1 top.error_inject
+b000000000000000000000000000000000000000 top.encoded_data
+b000000001000000000000000100000000000000 top.received_data
+b000000001000000000000000100000000000000 top.corrected_data
+b00000000000000000000000000000000 top.encoder.din
+b0000000 top.encoder.ecc_out
+b000000 top.encoder.ecc_out_temp
+b00000000000000000000000000100111 top.channel.DATA_WIDTH
+b000000000000000000000000000000000000000 top.channel.din
+1top.channel.sed_ded
+1top.channel.error_inject
+b011110 top.channel.error_pos1
+b001110 top.channel.error_pos2
+b000000001000000000000000100000000000000 top.channel.dout
+1top.decoder.en
+b01000000000000000100000000000000 top.decoder.din
+b0000000 top.decoder.ecc_in
+1top.decoder.sed_ded
+b01000000000000000100000000000000 top.decoder.dout
+b0000000 top.decoder.ecc_out
+0top.decoder.single_ecc_error
+1top.decoder.double_ecc_error
+b0110001 top.decoder.ecc_check
+b000000000000000000000000000000000000000 top.decoder.error_mask
+b001000000000000000010000000000000000000 top.decoder.din_plus_parity
+b001000000000000000010000000000000000000 top.decoder.dout_plus_parity
