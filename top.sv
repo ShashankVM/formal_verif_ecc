@@ -49,12 +49,12 @@ module top;
   COVER_ERROR_24_POS: cover property (error_pos1 == 6'd24);
 
   // cover single error detection and correction
-  COVER_SED_DED_ZERO: cover property (error_inject && !sed_ded);
+  COVER_SINGLE_ERROR_CORRECTION: cover property (error_inject && !sed_ded);
 
   // cover double error detection
-//  COVER_SED_DED_ONE: cover property (error_inject && sed_ded);    
+  COVER_DOUBLE_ERROR_DETECTION: cover property (error_inject && sed_ded);    
 
   // cover error_inject off
-//  COVER_ERROR_INJECT_OFF: cover property (error_inject == 1'b0);
+  COVER_ERROR_INJECT_OFF: cover property (error_inject == 1'b0);
 
 endmodule
