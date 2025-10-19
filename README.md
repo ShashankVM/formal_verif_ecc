@@ -1,3 +1,5 @@
 This project is documented here:
 1. Hackster.io  https://www.hackster.io/shashank-v-m/formal-verification-of-rvecc-error-correcting-code-hardware-81648f
-2. Hackaday.io  https://hackaday.io/project/195113-formal-verification-of-rvecc-error-correcting-code
+
+Run command: 
+`ebmc --systemverilog --top top top.sv rvecc_encode.sv channel_model.sv rvecc_decode.sv  --trace --vcd cover`
