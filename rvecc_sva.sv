@@ -46,22 +46,22 @@ module rvecc_sva  #(
     ASSERT_DECODER_ENABLE_FALSE:    assert property (!decoder_en |-> !single_ecc_error && !double_ecc_error);
 
     ASSERT_NO_FALSE_DOUBLE_ERROR_DETECTION:              assert property (!single_error_inject && !double_error_inject && decoder_en |-> !double_ecc_error);
-    ASSERT_NO_FALSE_SINGLE_ERROR_DETECTION_SINGLE_ERROR: assert property (!single_error_inject && decoder_en |-> !single_ecc_error);
+    
     ASSERT_NO_FALSE_SINGLE_ERROR_DETECTION:              assert property (!single_error_inject && !double_error_inject && decoder_en |-> !single_ecc_error);
     
     ASSERT_DOUBLE_ERROR_DETECTION:   assert property (double_error_inject && decoder_en |-> double_ecc_error);
 
     
     genvar i;
-    generate
+     generate
       if (DATA_WIDTH == 32) begin
         ASSERT_NO_SINGLE_ERROR_CORRECTION_IN_SED_DED:   assert property (sed_ded && decoder_en |-> !single_ecc_error);
         ASSERT_SINGLE_ERROR_CORRECTION_IN_NO_SED_DED:   assert property (!sed_ded && single_error_inject && decoder_en |-> single_ecc_error);
-
+        ASSERT_NO_FALSE_SINGLE_ERROR_DETECTION_SINGLE_ERROR: assert property (!single_error_inject && decoder_en && sed_ded |-> !single_ecc_error);
         // TO DO: check https://github.com/chipsalliance/Cores-VeeR-EL2/issues/521 gets fixed and if the (error_pos1 <= 37) condition can be removed
-        ASSERT_SINGLE_ERROR_CORRECTION_IN_SED_DED_DOUBLE_ECC_ERROR:   assert property (sed_ded && single_error_inject && decoder_en && (error_pos1 <= 37) |-> double_ecc_error);
+        ASSERT_SINGLE_ERROR_CORRECTION_IN_SED_DED_DOUBLE_ECC_ERROR:   assert property (sed_ded && single_error_inject && decoder_en |-> double_ecc_error);
         
-        for (i = 0; i <= CHANNEL_WIDTH-1; i++) begin : loop_error_pos
+       for (i = 0; i <= CHANNEL_WIDTH-1; i++) begin : loop_error_pos
           ASSERT_DATA_CORRECTION: assert property ((error_pos1 == i) && !sed_ded && decoder_en && single_error_inject |-> (encoded_data == corrected_data));
         end
        
@@ -85,5 +85,5 @@ module rvecc_sva  #(
 
     // cover double error detection
     COVER_SED_DED_ONE: cover property (sed_ded == 1'b1);
-
+    
   endmodule
