@@ -1,40 +1,3 @@
-// SPDX-License-Identifier: Apache-2.0
-// Copyright 2020 Western Digital Corporation or its affiliates.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-// all flops call the rvdff flop
-
-// 16 bit even parity generator
-module rveven_paritygen #(WIDTH = 16)  (
-                                         input  logic [WIDTH-1:0]  data_in,         // Data
-                                         output logic              parity_out       // generated even parity
-                                         );
-
-   assign  parity_out =  ^(data_in[WIDTH-1:0]) ;
-
-endmodule  // rveven_paritygen
-
-module rveven_paritycheck #(WIDTH = 16)  (
-                                           input  logic [WIDTH-1:0]  data_in,         // Data
-                                           input  logic              parity_in,
-                                           output logic              parity_err       // Parity error
-                                           );
-
-   assign  parity_err =  ^(data_in[WIDTH-1:0]) ^ parity_in ;
-
-endmodule  // rveven_paritycheck
-
 module rvecc_encode  (
                       input [31:0] din,
                       output [6:0] ecc_out
@@ -77,10 +40,10 @@ module rvecc_decode  (
    assign ecc_check[5] = ecc_in[5]^din[26]^din[27]^din[28]^din[29]^din[30]^din[31];
 
    // This is the parity bit
-   assign ecc_check[6] = ((^din[31:0])^(^ecc_in[6:0])) & ~sed_ded;
+   assign ecc_check[6] = ((^din[31:0])^(^ecc_in[6:0]));
 
-   assign single_ecc_error = en & (ecc_check[6:0] != 0) & ecc_check[6];   // this will never be on for sed_ded
-   assign double_ecc_error = en & (ecc_check[6:0] != 0) & ~ecc_check[6];  // all errors in the sed_ded case will be recorded as DE
+   assign single_ecc_error = en & (ecc_check[6:0] != 0) & ~sed_ded;   // this will never be on for sed_ded
+   assign double_ecc_error = en & (ecc_check[6:0] != 0);  // all errors in the sed_ded case will be recorded as DE
 
    // Generate the mask for error correctiong
    for (genvar i=1; i<40; i++) begin
@@ -144,4 +107,5 @@ module rvecc_decode_64  (
    assign ecc_error = en & (ecc_check[6:0] != 0);  // all errors in the sed_ded case will be recorded as DE
 
  endmodule // rvecc_decode_64
+
 
